@@ -1,0 +1,102 @@
+================================================================================
+    EVENT MANAGEMENT SYSTEM - QUICK SETUP CHECKLIST
+================================================================================
+
+Follow these steps to get your Event Management System running:
+
+STEP 1: INSTALL XAMPP
+[ ] Download XAMPP from https://www.apachefriends.org/
+[ ] Install XAMPP to default location
+[ ] Start Apache and MySQL services from XAMPP Control Panel
+
+STEP 2: SETUP PROJECT
+[ ] Copy 'event_manager' folder to: C:\xampp\htdocs\
+[ ] Full path should be: C:\xampp\htdocs\event_manager
+
+STEP 3: CREATE DATABASE
+[ ] Open browser and go to: http://localhost/phpmyadmin
+[ ] Click on "Import" tab
+[ ] Click "Choose File" button
+[ ] Select: C:\xampp\htdocs\event_manager\create_db.sql
+[ ] Click "Go" button to import
+
+STEP 4: VERIFY CONFIGURATION
+[ ] Check that config.php has correct database settings:
+    DB_HOST: localhost
+    DB_NAME: event_manager
+    DB_USER: root
+    DB_PASS: (empty string)
+    SITE_URL: http://localhost/event_manager
+
+STEP 5: SET PERMISSIONS
+[ ] Right-click on: C:\xampp\htdocs\event_manager\uploads
+[ ] Go to Properties > Security > Edit
+[ ] Make sure 'Users' have 'Modify' permissions
+[ ] Click OK
+
+STEP 6: TEST THE APPLICATION
+[ ] Open browser and go to: http://localhost/event_manager
+[ ] You should see the home page with sample events
+
+STEP 7: LOGIN AS ADMIN
+[ ] Click "Register" or use login button
+[ ] Use test credentials:
+    Email: admin@eventmanager.com
+    Password: admin123
+[ ] You should be logged in as admin with dashboard access
+
+STEP 8: TEST FEATURES
+[ ] Browse events on home page
+[ ] Search for events
+[ ] View event details
+[ ] Try registering for an event (must be logged out)
+[ ] Login as admin
+[ ] Go to Dashboard
+[ ] Create a new event
+[ ] Upload an event image
+[ ] Edit an event
+[ ] Delete an event
+[ ] View registrations
+
+✓ If all above work, your system is ready to use!
+
+================================================================================
+TROUBLESHOOTING QUICK FIXES
+================================================================================
+
+PROBLEM: "Error establishing database connection"
+FIX: Make sure MySQL is running in XAMPP Control Panel
+
+PROBLEM: "Page not found" or blank page
+FIX: Check that files are in: C:\xampp\htdocs\event_manager\
+     Check that Apache is running
+
+PROBLEM: Images not uploading
+FIX: Right-click uploads folder > Properties > Security
+     Give users 'Modify' permission
+
+PROBLEM: Database import fails
+FIX: Open create_db.sql in phpMyAdmin
+     Copy and paste SQL commands manually
+     Click "Go" after pasting
+
+PROBLEM: Login not working
+FIX: Clear browser cache and cookies
+     Try different browser
+     Check database was imported correctly
+
+================================================================================
+NEXT STEPS AFTER SETUP
+================================================================================
+
+1. Test all features thoroughly
+2. Create your own events
+3. Register as a regular user and test user features
+4. Explore the admin dashboard
+5. Customize the styling if needed
+6. Review README.txt for deployment instructions
+
+================================================================================
+END OF CHECKLIST
+================================================================================
+
